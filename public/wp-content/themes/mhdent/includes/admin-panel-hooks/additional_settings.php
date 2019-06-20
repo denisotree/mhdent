@@ -37,6 +37,26 @@ function additional_settings()
     register_setting('general', 'contact_email');
 
     add_settings_field(
+        'opening_hours_ru',
+        'График работы по русски',
+        'opening_hours_ru_field',
+        'general',
+        'over_options'
+    );
+
+    register_setting('general', 'opening_hours_ru');
+
+    add_settings_field(
+        'opening_hours_en',
+        'График работы по английски',
+        'opening_hours_en_field',
+        'general',
+        'over_options'
+    );
+
+    register_setting('general', 'opening_hours_en');
+
+    add_settings_field(
         'facebook',
         'Адрес в Facebook',
         'facebook_field',
@@ -121,6 +141,24 @@ function contact_email_field()
 		value="' . get_option('contact_email') . '" 
 		class="code2"
 	 />';
+}
+
+function opening_hours_ru_field()
+{
+    echo '<textarea 
+		name="opening_hours_ru"
+		class="code2"
+		rows="4"
+	 >' . get_option('opening_hours_ru') . '</textarea>';
+}
+
+function opening_hours_en_field()
+{
+    echo '<textarea 
+		name="opening_hours_en"
+		class="code2"
+		rows="4"
+	 >' . get_option('opening_hours_en') . '</textarea>';
 }
 
 function facebook_field()

@@ -17,10 +17,6 @@ function get_component($template, array $context = [], $delimeter = '-')
         return;
     }
 
-    if (!file_exists($template)) {
-        return;
-    }
-
     $templateParts = explode($delimeter, str_replace('.php', '', (string)$template));
     $templates[] = array_shift($templateParts);
     foreach ($templateParts as $i => $templatePart) {
@@ -31,6 +27,11 @@ function get_component($template, array $context = [], $delimeter = '-')
     }, $templates);
     $template = locate_template(array_reverse($templates));
     extract($context);
+
+    if (!file_exists($template)) {
+        return;
+    }
+
     /** @noinspection PhpIncludeInspection */
     include apply_filters('sage/locate_template', $template, $templates) ?: $template;
 }

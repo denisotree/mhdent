@@ -10,10 +10,13 @@
 <body>
 
 <header>
+        <?php
 
-    <div class="header__container">
+        get_component('components/header/topbar.php', []);
 
-    </div>
+        get_component('components/header/menu.php', []);
+
+        ?>
 
 </header>
 

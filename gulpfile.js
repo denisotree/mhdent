@@ -26,7 +26,7 @@ gulp.task('fonts', function(){
 });
 
 gulp.task('imageMin', function() {
-    return gulp.src('images/**/*.{jpg,png,gif,jpeg}', {cwd: folder.src})
+    return gulp.src('images/**/*.{jpg,png,gif,jpeg,svg}', {cwd: folder.src})
         .pipe(imagemin())
         .pipe(gulp.dest(folder.dist + '/images'));
 });
@@ -35,7 +35,7 @@ gulp.task('svgstore', function () {
     return gulp
         .src(folder.src + '/icons/*.svg')
         .pipe(svgmin())
-        .pipe(svgstore())
+        // .pipe(svgstore())
         .pipe(gulp.dest(folder.dist + '/images'));
 });
 

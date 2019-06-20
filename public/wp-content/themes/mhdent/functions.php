@@ -46,12 +46,6 @@ add_action('after_setup_theme', 'mhdent_setup');
 
 function mhdent_scripts()
 {
-
-    wp_enqueue_style('fa-1', 'https://use.fontawesome.com/releases/v5.8.2/css/solid.css', array(), '5.8.2');
-    wp_enqueue_style('fa-2', 'https://use.fontawesome.com/releases/v5.8.2/css/regular.css', array(), '5.8.2');
-    wp_enqueue_style('fa-3', 'https://use.fontawesome.com/releases/v5.8.2/css/brands.css', array(), '5.8.2');
-    wp_enqueue_style('fa-4', 'https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css', array(), '5.8.2');
-
     wp_enqueue_style('basic-styles', get_stylesheet_uri(), array(), '1.0.0');
 
     wp_enqueue_style('mhdent-styles', get_template_directory_uri() . '/css/styles.min.css', array(), '0.0.1');
