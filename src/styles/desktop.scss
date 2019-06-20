@@ -1,0 +1,18 @@
+@import "fonts";
+@import "variables";
+@import "default-editor";
+
+html {
+  font-size: 15px;
+}
+
+html, body, article, div, span, figure, p, a, li {
+  font-family: "PT Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "PT Serif", serif;
+}
+
+@import "tablet";
+@import "mobile";

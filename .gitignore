@@ -1,0 +1,16 @@
+### WordPress ###
+wp-config.php
+
+public/wp-content/uploads/
+public/wp-content/languages/
+public/wp-content/upgrade/
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+node_modules/
+
+.idea
