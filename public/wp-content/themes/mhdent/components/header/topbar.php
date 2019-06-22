@@ -16,20 +16,22 @@ if (pll_current_language() == 'ru') {
 
 <div class="topbar__wrapper">
     <div class="topbar__logo">
-        <img src="<?php echo $template_dir; ?>/images/logo.svg" alt="">
+        <a href="/">
+            <img src="<?= $template_dir; ?>/images/logo.svg" alt="">
+        </a>
     </div>
-    <div class="section__container">
+    <div class="header__container">
         <div class="topbar__item">
             <div class="phone__link">
-                <i class="fas fa-phone-square-alt"></i>
-                <a href="tel:<?php echo $phone_link; ?>">
-                    <?php echo $phone; ?>
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:<?= $phone_link; ?>">
+                    <?= $phone; ?>
                 </a>
             </div>
         </div>
         <div class="topbar__item">
             <div class="topbar__text">
-                <?php echo $open_hours; ?>
+                <?= $open_hours; ?>
             </div>
         </div>
         <div class="topbar__item">

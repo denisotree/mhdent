@@ -65,16 +65,18 @@ add_action('wp_enqueue_scripts', 'mhdent_scripts');
 
 require_once __DIR__ . '/includes/admin-panel-hooks/admin-panel-switcher.php';
 
-require_once __DIR__ . '/includes/admin-panel-hooks/additional_settings.php';
+require_once __DIR__ . '/includes/admin-panel-hooks/additional-settings.php';
 
-require_once __DIR__ . '/includes/admin-panel-hooks/admin_panel_styles.php';
+require_once __DIR__ . '/includes/admin-panel-hooks/admin-panel-styles.php';
 
 /**
  *  Функции ядра
  */
 
-require_once __DIR__ . '/includes/core_hooks/get_component.php';
+require_once __DIR__ . '/includes/core_hooks/get-component.php';
 
-require_once __DIR__ . '/includes/core_hooks/archive_title_filter.php';
+require_once __DIR__ . '/includes/core_hooks/archive-title-filter.php';
+
+require_once __DIR__ . '/includes/core_hooks/taxonomy-thumbnail.php';
 
 
