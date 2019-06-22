@@ -137,6 +137,10 @@ p {
   }
 }
 
+.main__slider-container {
+  margin-bottom: 2rem;
+}
+
 .main__slider-item {
   position: relative;
   display: block;
@@ -304,6 +308,18 @@ p {
 
 .card__wrapper {
   width: 100%;
+  a:hover {
+    .card__box {
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, .1);
+    }
+    .card__title {
+      color: $main-red;
+    }
+  }
+}
+
+.card__box {
+  transition: all .3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, .05);
 }
 
@@ -340,6 +356,7 @@ p {
   color: $main-dark;
   font-weight: 600;
   margin-bottom: .5rem;
+  transition: all .3s;
 }
 
 .card__excerpt {
@@ -392,6 +409,79 @@ p {
   text-align: center;
   color: $main-dark;
   transition: all .3s;
+}
+
+footer {
+  background-color: $main-dark;
+}
+
+.footer__container {
+  position: relative;
+  width: 86%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.footer__social {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1;
+  .footer__social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  a:hover {
+    i {
+      color: $main-green;
+    }
+  }
+  i {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #ffffff;
+    transition: .3s;
+    margin: 0 .5rem;
+  }
+}
+
+.footer__anagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+.footer__copyright {
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer__contacts {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1rem;
+  a {
+    color: #ffffff;
+    transition: color .3s;
+  }
+  a:hover {
+    color: $main-green;
+  }
 }
 
 @import "tablet";
