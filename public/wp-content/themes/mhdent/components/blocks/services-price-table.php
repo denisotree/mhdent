@@ -86,6 +86,9 @@ if ($type == 'current') {
 
                         <?php
                     }
+
+                    wp_reset_postdata();
+
                 }
 
             }

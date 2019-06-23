@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: Prices
+ * Template name: Timetable
  */
 
 get_header();
@@ -24,16 +24,13 @@ get_header();
             <div class="row">
                 <div class="col-lg-8">
                     <div class="service__article">
-                        <?php
-                        get_component('components/blocks/services-price-table.php', [
+                        <?php get_component('components/blocks/working-hours-table.php', [
                             'type' => 'all'
-                        ]);
-
-                        ?>
+                        ]) ?>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="prices__description">
+                    <div class="timetable__description">
                         <?= get_the_content() ?>
                     </div>
                 </div>

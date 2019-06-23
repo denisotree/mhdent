@@ -6,7 +6,11 @@ while (have_posts()) :
 
     get_component('components/content/single-page.php', []);
 
-
+    ?>
+    <div class="section__container">
+        <?= get_the_content() ?>
+    </div>
+<?php
 endwhile;
 
 get_footer();

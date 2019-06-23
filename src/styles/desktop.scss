@@ -669,6 +669,13 @@ footer {
   }
 }
 
+.working-hours__table-title {
+  font-size: 1.5rem;
+  font-family: PT Serif, serif;
+  color: $main-dark;
+  font-weight: 600;
+}
+
 .equal-width-cols {
   width: 100%;
   table-layout: fixed;
