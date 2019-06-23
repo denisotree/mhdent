@@ -33,7 +33,8 @@ if (pll_current_language() == 'ru') {
                     <img src="<?= get_template_directory_uri() ?>/images/anagram.png" alt="">
                 </div>
                 <div class="footer__copyright">
-                    <?= $copyright ?>
+                    <?= $copyright ?><br>
+                    2017 - <?= date('Y') ?>
                 </div>
             </div>
             <div class="col-lg-3">

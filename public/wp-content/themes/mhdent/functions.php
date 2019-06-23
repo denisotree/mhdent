@@ -79,4 +79,6 @@ require_once __DIR__ . '/includes/core_hooks/archive-title-filter.php';
 
 require_once __DIR__ . '/includes/core_hooks/taxonomy-thumbnail.php';
 
+require_once __DIR__ . '/includes/core_hooks/order-filter.php';
+
 

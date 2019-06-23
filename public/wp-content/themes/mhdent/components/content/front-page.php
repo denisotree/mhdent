@@ -8,9 +8,13 @@ get_component('components/blocks/page-slider.php', []);
             <?php get_component('components/blocks/head-welcome.php', []) ?>
         </div>
         <div class="col-lg-3">
-            <?php get_component('components/blocks/centered-section-title.php', [
+            <?php
+
+            $news_link = pll_current_language() == 'ru' ? '/novosti/' : '/en/novosti/';
+
+            get_component('components/blocks/centered-section-title.php', [
                 'title_text' => 'Новости',
-                'title_link' => '/news/'
+                'title_link' => $news_link
             ]) ?>
             <?php get_component('components/content/loop.php', [
                 'loop_type' => 'query',
@@ -27,6 +31,7 @@ get_component('components/blocks/page-slider.php', []);
     <?php get_component('components/blocks/centered-section-title.php', [
         'title_text' => 'Услуги',
         'title_link' => '/uslugi/'
-    ]) ?>
-    <?php get_component('components/content/services-grid.php', [])?>
+    ]);
+
+    get_component('components/content/services-grid.php', []) ?>
 </div>

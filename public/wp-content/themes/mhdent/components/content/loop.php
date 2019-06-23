@@ -8,7 +8,11 @@
  *
  * @var $loop_cols / количество колонок
  *
- * @var $loop_item_type / card — карточка с фото и текстом / row — запись в одну строку с маленькой фотографией
+ * @var $loop_item_type |
+ *  card — карточка с фото и текстом
+ *  row — запись в одну строку с маленькой фотографией
+ *  just-title — только заголовок, можно использовать для меню
+ *  team-card — карточка с картинкой вертикальной ориентации и одинаковым по высоте описанием
  *
  */
 
@@ -33,10 +37,11 @@ $loop_item_before = '<div class="col-lg-' . round(12 / $loop_cols) . ' loop__ite
 $loop_item_after = '</div>';
 
 if ($loop_type == 'simple') {
-    if (have_posts()) {
+    global $wp_query;
+    if ($wp_query->have_posts()) {
         echo $loop_before;
-        while (have_posts()) {
-            the_post();
+        while ($wp_query->have_posts()) {
+            $wp_query->the_post();
             echo $loop_item_before;
             get_component('components/content/single/' . $loop_item_type . '.php', []);
             echo $loop_item_after;

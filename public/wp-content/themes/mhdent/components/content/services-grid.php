@@ -1,7 +1,7 @@
 <?php
 
 $services_types = get_terms([
-    'taxonomy' => 'service_type',
+    'taxonomy' => 'service',
     'hide_empty' => true
 ]);
 
@@ -14,7 +14,7 @@ $services_types = get_terms([
         $image_url = wp_get_attachment_image_url($image_id, 'thumbnail');
         ?>
         <div class="col-lg-4 col-md-6">
-            <a href="/<?= $type->slug?>/">
+            <a href="<?= get_term_link($type->term_id)?>">
                 <div class="services-grid__item">
                     <div class="services-grid__item-thumbnail">
                         <img src="<?= $image_url ?>" alt="<?= $type->name ?>">

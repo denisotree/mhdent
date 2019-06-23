@@ -4,8 +4,15 @@ get_header();
 while (have_posts()) :
     the_post();
 
-    get_component('components/content/single-' . get_post_type() . '.php', []);
+?>
 
+    <div class="section__container">
+
+    <?php get_component('components/content/single/' . get_post_type() . '.php', []) ?>
+
+    </div>
+
+<?php
 
 endwhile;
 
