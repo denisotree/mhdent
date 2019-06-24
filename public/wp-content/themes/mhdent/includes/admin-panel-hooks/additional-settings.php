@@ -116,6 +116,16 @@ function additional_settings()
 
     register_setting('general', 'copyright_en');
 
+    add_settings_field(
+        'api_key',
+        'API ключ для карт Google',
+        'api_key_field',
+        'general',
+        'over_options'
+    );
+
+    register_setting('general', 'api_key');
+
 }
 
 function over_option_description()
@@ -216,6 +226,16 @@ function copyright_en_field()
     echo '<input 
 		name="copyright_en"
 		value="' . get_option('copyright_en') . '" 
+		class="code2"
+		type="text"
+	 />';
+}
+
+function api_key_field()
+{
+    echo '<input 
+		name="api_key"
+		value="' . get_option('api_key') . '" 
 		class="code2"
 		type="text"
 	 />';

@@ -8,10 +8,13 @@ $footer_vk = get_option('vk');
 
 if (pll_current_language() == 'ru') {
     $copyright = get_option('copyright_ru');
+    $policy = '/politika/';
 } elseif (pll_current_language() == 'en') {
     $copyright = get_option('copyright_en');
+    $policy = '/policy/';
 } else {
     $copyright = get_option('copyright_en');
+    $policy = '/policy/';
 }
 
 ?>
@@ -21,11 +24,12 @@ if (pll_current_language() == 'ru') {
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__social">
-                    <?php pll_e('Мы в социальных сетях'); ?>
                     <div class="footer__social-links">
+                        <?php pll_e('Мы в социальных сетях: '); ?>
                         <a class="footer__social-item" href="<?= $footer_facebook ?>"><i class="fab fa-facebook-f"></i></a>
                         <a class="footer__social-item" href="<?= $footer_vk ?>"><i class="fab fa-vk"></i></a>
                     </div>
+                    <a href="<?= $policy ?>"><?php pll_e('Политика конфиденциальности') ?></a>
                 </div>
             </div>
             <div class="col-lg-6">
