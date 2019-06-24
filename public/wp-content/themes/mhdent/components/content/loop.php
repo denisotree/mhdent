@@ -32,7 +32,15 @@ $loop_before = '<div class="loop__wrapper"><div class="row">';
 
 $loop_after = '</div></div>';
 
-$loop_item_before = '<div class="col-lg-' . round(12 / $loop_cols) . ' loop__item" >';
+if ($loop_item_type == 'row') {
+    $loop_item_before = '<div class="col-lg-12 loop__item" >';
+} else {
+    if ($loop_cols != 1) {
+        $loop_item_before = '<div class="col-lg-' . round(12 / $loop_cols) . ' col-md-' . round(12 / $loop_cols * 2) . ' loop__item" >';
+    } else {
+        $loop_item_before = '<div class="col-lg-12 col-md-6 loop__item" >';
+    }
+}
 
 $loop_item_after = '</div>';
 

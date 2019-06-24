@@ -15,9 +15,14 @@ if (pll_current_language() == 'ru') {
 ?>
 
 <div class="topbar__wrapper">
-    <div class="topbar__logo">
+    <div class="topbar__logo d-none d-md-block">
         <a href="/">
             <img src="<?= $template_dir; ?>/images/logo.svg" alt="">
+        </a>
+    </div>
+    <div class="topbar__logo-mob d-md-none">
+        <a href="/">
+            <img src="<?= $template_dir; ?>/images/anagram.png" alt="">
         </a>
     </div>
     <div class="header__container">
@@ -39,6 +44,7 @@ if (pll_current_language() == 'ru') {
                     Заказать обратный звонок
                 </a>
         </div>
+        <div class="topbar__menu-mob d-md-none" id="mobMenuBars"><i class="fa fa-bars"></i></div>
     </div>
 
 </div>

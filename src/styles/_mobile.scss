@@ -1,8 +1,137 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+
+  .topbar__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .topbar__logo-mob {
+    padding: .5rem 1rem;
+    img {
+      height: 3rem;
+      width: auto;
+    }
+  }
+
+  .header__container {
+    padding: .5rem;
+    flex-wrap: wrap;
+  }
+
+  .topbar__menu-mob {
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+
+  .menu__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: #ffffff;
+    z-index: 10;
+    height: 100%;
+    .header__container {
+      justify-content: center;
+      height: 100%;
+    }
+    .menu__list {
+      width: 100%;
+    }
+    ul {
+      li {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  .menu__close {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 11;
+    i {
+      font-size: 1.5rem;
+      color: $main-dark;
+
+    }
+  }
+
+  .head__welcome-image-mob {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .head__welcome-bg {
+    background-color: #eef2f3;
+    background-image: none !important;
+  }
+
+  .head__welcome-content {
+    width: 100%;
+  }
+
+  .main__slider-item-image::before {
+    padding-bottom: 120%;
+  }
+
+  .main-section-title {
+    font-size: 2rem;
+  }
+
+  .contacts__info-content {
+    text-align: center;
+  }
 
 }
 
-
 @media screen and (max-width: 450px) {
+
+  .topbar__text {
+    display: none;
+  }
+
+  .topbar__menu-mob {
+    padding: 0 .5rem 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  .main__slider-item-image::after {
+    background: linear-gradient(to right,#fff 0,rgba(255,255,255,0) 100%);
+  }
+
+  .main__slider-item-content-title {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .main__slider-item-content-subtitle {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .main__slider-item-content {
+    width: 100%;
+    padding: 0 3rem;
+  }
+
+  .head__welcome-content {
+    padding: 8rem 1rem 1rem;
+  }
+
 
 }

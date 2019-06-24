@@ -648,6 +648,7 @@ footer {
           background: url("../images/plate_body.png") no-repeat center right;
           background-size: cover;
           .services__table-subtitle-text {
+            display: block;
             font-size: 1rem;
             font-family: PT Serif, serif;
             color: #ffffff;
@@ -656,7 +657,7 @@ footer {
           &::before {
             content: '';
             position: absolute;
-            left: -11px;
+            left: -10px;
             top: 0;
             background: url("../images/plate_start.png") no-repeat center left;
             background-size: contain;
@@ -697,6 +698,7 @@ footer {
 
 .equal-width-cols {
   width: 100%;
+  min-width: 650px;
   table-layout: fixed;
   td {
     width: 100%;

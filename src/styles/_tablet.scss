@@ -19,4 +19,85 @@
 
 @media screen and (max-width: 960px) {
 
+  html {
+    font-size: 12px;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  main {
+    min-height: calc(100vh - 200px);
+  }
+
+  .header__container {
+    width: 100%;
+  }
+
+  .head__welcome-content {
+    padding: 8rem 2rem 2rem;
+    width: 50%;
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  }
+
+  .topbar__logo {
+    left: 2rem;
+  }
+
+  .main__slider-item-image {
+    &::before {
+      padding-bottom: 50%;
+    }
+  }
+
+  .footer__social {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .loop__item:last-child .card__box {
+    margin-bottom: 2rem;
+  }
+
+  .services__price-table, .working-hours__table {
+    table {
+      tbody{
+        tr {
+          td {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .head__welcome-container {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .section__container {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .contacts__info-content {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacts__info-email {
+    margin-bottom: 2rem;
+  }
+
+  .doctor__photo {
+    margin-bottom: 2rem;
+  }
+
 }

@@ -12,5 +12,8 @@ $welcome_text = CFS()->get('welcome_text');
         <div class="head__welcome-content">
             <?= $welcome_text; ?>
         </div>
+        <div class="head__welcome-image-mob d-md-none">
+            <img src="<?= $head_photo; ?>" alt="">
+        </div>
     </div>
 </div>

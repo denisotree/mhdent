@@ -14,9 +14,9 @@ if ($type == 'current') {
     $saturday = CFS()->get('saturday');
     $sunday = CFS()->get('sunday');
     ?>
-    <div class="working-hours__table">
+    <div class="working-hours__table table-responsive">
         <div class="working-hours__table-title">
-            Расписание работы
+            <?php pll_e('Часы работы'); ?>
         </div>
         <table class="equal-width-cols">
             <thead>
@@ -55,7 +55,7 @@ if ($type == 'current') {
 
     if ($doctors_query->have_posts()) {
         ?>
-        <div class="working-hours__table">
+        <div class="working-hours__table table-responsive">
             <table class="equal-width-cols">
                 <thead>
                 <tr>
