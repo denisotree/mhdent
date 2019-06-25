@@ -52,6 +52,7 @@ if (pll_current_language() == 'ru') {
         <?php
 
         get_component('components/modals/modal-consult-form.php', []);
+        get_component('components/modals/modal-back-call.php', []);
 
         ?>
     </div>
