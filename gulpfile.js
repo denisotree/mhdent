@@ -15,7 +15,7 @@ const
 
 const folder = {
     src: './src/',
-    dist: './public/wp-content/themes/mhdent/'
+    dist: './mhdent/wp-content/themes/mhdent/'
 };
 
 gulp.task('fonts', function(){

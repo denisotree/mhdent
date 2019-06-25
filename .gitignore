@@ -1,9 +1,9 @@
 ### WordPress ###
 wp-config.php
 
-public/wp-content/uploads/
-public/wp-content/languages/
-public/wp-content/upgrade/
+/mhdent/wp-content/uploads/
+/mhdent/wp-content/languages/
+/mhdent/wp-content/upgrade/
 
 ### macOS ###
 # General
@@ -14,3 +14,4 @@ public/wp-content/upgrade/
 node_modules/
 
 .idea
+.env
