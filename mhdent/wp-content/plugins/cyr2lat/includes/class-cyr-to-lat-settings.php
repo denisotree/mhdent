@@ -298,8 +298,8 @@ class Cyr_To_Lat_Settings {
 				?>
 			</form>
 
-			<div>
-				<h2 id="donate">
+			<div id="donate">
+				<h2>
 					<?php echo esc_html( __( 'Donate', 'cyr2lat' ) ); ?>
 				</h2>
 				<p>
@@ -733,5 +733,3 @@ class Cyr_To_Lat_Settings {
 		return $current_screen && ( 'options' === $current_screen->id || self::SCREEN_ID === $current_screen->id );
 	}
 }
-
-// eof.

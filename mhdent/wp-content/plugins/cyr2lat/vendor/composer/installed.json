@@ -6,18 +6,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/kagg-design/wp-background-processing.git",
-            "reference": "eaaa6211b6151d75f4c0ee5c8be52094315a8e77"
+            "reference": "75142e7269c5df90ad3699031b35028975980258"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kagg-design/wp-background-processing/zipball/eaaa6211b6151d75f4c0ee5c8be52094315a8e77",
-            "reference": "eaaa6211b6151d75f4c0ee5c8be52094315a8e77",
+            "url": "https://api.github.com/repos/kagg-design/wp-background-processing/zipball/75142e7269c5df90ad3699031b35028975980258",
+            "reference": "75142e7269c5df90ad3699031b35028975980258",
             "shasum": ""
         },
         "require": {
             "php": ">=5.2"
         },
-        "time": "2019-03-17T09:04:10+00:00",
+        "time": "2019-06-22T13:34:08+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {

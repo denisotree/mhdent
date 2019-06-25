@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6ea461ea7c2388800365ee94bb99f7e0
+class ComposerStaticInit889b56da8e5c956977b4e015c55d5852
 {
     public static $prefixLengthsPsr4 = array (
         'C' => 
@@ -27,6 +27,7 @@ class ComposerStaticInit6ea461ea7c2388800365ee94bb99f7e0
         'Cyr_To_Lat_Converter' => __DIR__ . '/../..' . '/includes/class-cyr-to-lat-converter.php',
         'Cyr_To_Lat_Main' => __DIR__ . '/../..' . '/includes/class-cyr-to-lat-main.php',
         'Cyr_To_Lat_Post_Conversion_Process' => __DIR__ . '/../..' . '/includes/background-processes/class-cyr-to-lat-post-conversion-process.php',
+        'Cyr_To_Lat_Requirements' => __DIR__ . '/../..' . '/includes/class-cyr-to-lat-requirements.php',
         'Cyr_To_Lat_Settings' => __DIR__ . '/../..' . '/includes/class-cyr-to-lat-settings.php',
         'Cyr_To_Lat_Term_Conversion_Process' => __DIR__ . '/../..' . '/includes/background-processes/class-cyr-to-lat-term-conversion-process.php',
         'Cyr_To_Lat_WP_CLI' => __DIR__ . '/../..' . '/includes/class-cyr-to-lat-wp-cli.php',
@@ -37,9 +38,9 @@ class ComposerStaticInit6ea461ea7c2388800365ee94bb99f7e0
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6ea461ea7c2388800365ee94bb99f7e0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6ea461ea7c2388800365ee94bb99f7e0::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit6ea461ea7c2388800365ee94bb99f7e0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit889b56da8e5c956977b4e015c55d5852::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit889b56da8e5c956977b4e015c55d5852::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit889b56da8e5c956977b4e015c55d5852::$classMap;
 
         }, null, ClassLoader::class);
     }

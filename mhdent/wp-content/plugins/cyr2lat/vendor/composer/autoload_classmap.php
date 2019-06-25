@@ -12,6 +12,7 @@ return array(
     'Cyr_To_Lat_Converter' => $baseDir . '/includes/class-cyr-to-lat-converter.php',
     'Cyr_To_Lat_Main' => $baseDir . '/includes/class-cyr-to-lat-main.php',
     'Cyr_To_Lat_Post_Conversion_Process' => $baseDir . '/includes/background-processes/class-cyr-to-lat-post-conversion-process.php',
+    'Cyr_To_Lat_Requirements' => $baseDir . '/includes/class-cyr-to-lat-requirements.php',
     'Cyr_To_Lat_Settings' => $baseDir . '/includes/class-cyr-to-lat-settings.php',
     'Cyr_To_Lat_Term_Conversion_Process' => $baseDir . '/includes/background-processes/class-cyr-to-lat-term-conversion-process.php',
     'Cyr_To_Lat_WP_CLI' => $baseDir . '/includes/class-cyr-to-lat-wp-cli.php',
