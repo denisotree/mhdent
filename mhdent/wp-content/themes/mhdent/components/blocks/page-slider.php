@@ -20,6 +20,7 @@ $slider_items = CFS()->get('main_slider_loop');
             $slider_link_text = $slider_item['main_slider_link_text'];
             $slider_link_url = $slider_item['main_slider_link'];
             $slider_link_target = $slider_item['main_slider_target'];
+            $slider_link_class = $slider_item['main_slider_link_class'];
             if ($slider_link_target != 1) {
                 $target_blank = '';
             } else {
