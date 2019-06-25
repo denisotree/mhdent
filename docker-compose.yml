@@ -5,7 +5,7 @@ services:
     image: wordpress:${WORDPRESS_VERSION:-php7.3-fpm}
     container_name: mhdent
     volumes:
-      - ./mhdent:/var/www/html
+      - ./mhdent:/var/www/mhdent
     environment:
       - WORDPRESS_DB_NAME=${WORDPRESS_DB_NAME:-wordpress}
       - WORDPRESS_TABLE_PREFIX=${WORDPRESS_TABLE_PREFIX:-wp_}
