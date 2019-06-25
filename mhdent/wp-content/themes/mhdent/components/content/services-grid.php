@@ -1,9 +1,20 @@
 <?php
 
+$lang = pll_current_language();
+
 $services_types = get_terms([
     'taxonomy' => 'service',
     'hide_empty' => true
 ]);
+
+if($services_types){
+    foreach ($services_types as $key => $type) {
+        if(pll_get_term_language($type->term_id) !== $lang){
+            unset($services_types[$key]);
+        }
+    }
+    $positions_tax = array_values($services_types);
+}
 
 ?>
 
@@ -27,3 +38,5 @@ $services_types = get_terms([
         </div>
     <?php } ?>
 </div>
+
+

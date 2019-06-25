@@ -11,6 +11,7 @@ $slider_items = CFS()->get('main_slider_loop');
 <div class="main__slider-container">
     <div class="main__slider-items">
         <?php
+        if (is_array($slider_items) && count($slider_items)) {
         foreach ($slider_items as $slider_item) {
 
             $slider_image = $slider_item['main_slider_image'];
@@ -43,6 +44,6 @@ $slider_items = CFS()->get('main_slider_loop');
                     </div>
                 </div>
             <?php }
-        } ?>
+        } }?>
     </div>
 </div>
