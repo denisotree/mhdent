@@ -39,7 +39,7 @@ $slider_items = CFS()->get('main_slider_loop');
                                 <div class="main__slider-item-content-subtitle"><?= $slider_subtitle; ?></div><?php } ?>
                             <?php if ($slider_link_text !== '' && $slider_link_url !== '') { ?>
                                 <div class="main__slider-item-content-link">
-                                    <a class="btn btn-style-1" <?= $target_blank; ?> href="<?= $slider_link_url; ?>"><?= $slider_link_text; ?></a>
+                                    <a class="btn btn-style-1 <?= $slider_link_class ?>" <?= $target_blank; ?> href="<?= $slider_link_url; ?>"><?= $slider_link_text; ?></a>
                                 </div><?php } ?>
                         </div>
                     </div>
