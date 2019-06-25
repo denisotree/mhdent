@@ -38,6 +38,7 @@ services:
       - ${NGINX_CONF_DIR:-./nginx}:/etc/nginx/conf.d
       - ${NGINX_LOG_DIR:-./logs/nginx}:/var/log/nginx
       - ${SITE_1_DATA_DIR:-./wordpress}:/var/www/mhdent
+      - ${SITE_2_DATA_DIR:-./wordpress}:/var/www/lagomdev
       - ${SSL_CERTS_DIR:-./certs}:/etc/letsencrypt
       - ${SSL_CERTS_DATA_DIR:-./certs-data}:/data/letsencrypt
     depends_on:
