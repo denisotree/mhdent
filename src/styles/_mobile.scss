@@ -97,6 +97,15 @@
     text-align: center;
   }
 
+  .card__row-box {
+    flex-direction: column;
+  }
+
+  .card__row-thumbnail {
+    width: 100%;
+    margin: 0 0 1rem;
+  }
+
 }
 
 @media screen and (max-width: 450px) {
