@@ -12,16 +12,18 @@ if (pll_current_language() == 'ru') {
     $open_hours = get_option('opening_hours_en');
 }
 
+$home_link = pll_home_url();
+
 ?>
 
 <div class="topbar__wrapper">
     <div class="topbar__logo d-none d-md-block">
-        <a href="/">
+        <a href="<?= $home_link ?>">
             <img src="<?= $template_dir; ?>/images/logo.svg" alt="">
         </a>
     </div>
     <div class="topbar__logo-mob d-md-none">
-        <a href="/">
+        <a href="<?= $home_link ?>">
             <img src="<?= $template_dir; ?>/images/anagram.png" alt="">
         </a>
     </div>
