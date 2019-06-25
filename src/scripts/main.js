@@ -28,6 +28,11 @@ $(document).ready(function(){
         var currentPage = $(this).data('page');
         $(formID).modal('show');
         $('#form_subject').val(currentPage);
-    })
+    });
+
+    $('#backCallButton').on('click', function (e) {
+        e.preventDefault();
+        $('#modalBackCallForm').modal('show');
+    });
 
 });
