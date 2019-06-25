@@ -48,6 +48,13 @@ if (pll_current_language() == 'ru') {
             </div>
         </div>
     </div>
+    <div class="modal-area">
+        <?php
+
+        get_component('components/modals/modal-consult-form.php', []);
+
+        ?>
+    </div>
 </footer>
 
 <?php wp_footer(); ?>

@@ -43,7 +43,7 @@ $home_link = pll_home_url();
         </div>
         <div class="topbar__item">
                 <a class="btn btn-style-1" href="#">
-                    Заказать обратный звонок
+                    <?php pll_e('Заказать обратный звонок')?>
                 </a>
         </div>
         <div class="topbar__menu-mob d-md-none" id="mobMenuBars"><i class="fa fa-bars"></i></div>

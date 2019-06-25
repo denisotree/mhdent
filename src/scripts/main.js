@@ -20,5 +20,14 @@ $(document).ready(function(){
             body.css('overflow', 'hidden');
             mobMenu.fadeOut()
         }
+    });
+
+    $('.consultButton').on('click', function (e) {
+        e.preventDefault();
+        var formID = $(this).attr('href');
+        var currentPage = $(this).data('page');
+        $(formID).modal('show');
+        $('#form_subject').val(currentPage);
     })
+
 });

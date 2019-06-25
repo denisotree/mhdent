@@ -28,6 +28,29 @@ get_component('components/blocks/main-section-title.php', [
         </div>
         <div class="col-xl-8 col-lg-9">
             <div class="service__article">
+                <div class="services__price-table table-responsive">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th><?php pll_e('Услуга') ?></th>
+                            <th><?php pll_e('Цена') ?></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        $title = get_the_title();
+                        $price = CFS()->get('service_price');
+                        ?>
+                        <tr>
+                            <td><?= $title ?></td>
+                            <td><?= $price ?></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="service__coll-to-action">
+                        <a href="#modalConsultForm" data-page="<?= $title ?>" class="btn btn-style-1 consultButton"><?php pll_e('Получить консультацию') ?></a>
+                    </div>
+                </div>
                 <?php
 
                 echo get_the_content();

@@ -713,6 +713,10 @@ footer {
   }
 }
 
+.service__coll-to-action {
+  padding: 1rem 0;
+}
+
 .working-hours__table {
   table {
     thead {
@@ -857,7 +861,36 @@ footer {
   padding-bottom: 56%;
 }
 
+.wpcf7-text {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: .5rem;
+  font-family: PT Serif, serif;
+  outline: none;
+  border: 1px solid #CCCCCC;
+  width: 100%;
+}
 
+.wpcf7-textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: PT Serif, serif;
+  resize: none;
+  outline: none;
+  border: 1px solid #CCCCCC;
+}
+
+.wpcf7-response-output {
+  font-size: 1rem;
+}
+
+.form-note {
+  font-size: .9rem;
+  font-family: PT Serif, serif;
+  color: $main-dark;
+  padding: 2rem 0 0;
+}
 
 @import "tablet";
 @import "mobile";
