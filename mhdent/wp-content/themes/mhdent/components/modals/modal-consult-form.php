@@ -4,6 +4,10 @@
  * Вспывающая форма "Получить консультацию"
  */
 
+$frontpage_id = get_option('page_on_front');
+
+$consultForm = CFS()->get('consult_form', $frontpage_id);
+
 if (pll_current_language() == 'ru') {
     $form = '[contact-form-7 id="201" title="Форма Получить консультацию"]';
 } else {
@@ -24,7 +28,7 @@ if (pll_current_language() == 'ru') {
             <div class="modal-body">
                 <?php
 
-                echo do_shortcode($form);
+                echo do_shortcode($consultForm);
 
                 ?>
             </div>
