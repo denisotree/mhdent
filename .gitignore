@@ -14,8 +14,3 @@ wp-config.php
 node_modules/
 
 .idea
-.env
-
-certs/
-logs/
-mysql/
