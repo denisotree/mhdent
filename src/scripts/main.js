@@ -20,8 +20,8 @@ $(document).ready(function () {
         var body = $('body');
         var mobMenu = $('.menu__wrapper');
         if (mobMenu.is(':visible')) {
-            body.css('overflow', 'auto');
-            html.css('overflow', 'auto');
+            body.css('overflow', '');
+            html.css('overflow', '');
             mobMenu.fadeOut()
         }
     });
