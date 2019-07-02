@@ -5,9 +5,9 @@
 
   .topbar__wrapper {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: column;
   }
 
   .topbar__logo-mob {
@@ -19,11 +19,22 @@
   }
 
   .header__container {
-    padding: .5rem;
-    flex-wrap: wrap;
+    padding: .5rem 1rem;
+    justify-content: space-between;
+  }
+
+  .mob_show {
+    display: block;
+  }
+
+  .mob_hide {
+    display: none;
   }
 
   .topbar__menu-mob {
+    position: absolute;
+    top: .5rem;
+    right: 0;
     color: #ffffff;
     font-size: 2rem;
     padding: 0 1rem;
@@ -115,7 +126,7 @@
   }
 
   .topbar__menu-mob {
-    padding: 0 .5rem 0 1rem;
+    top: 1rem;
     font-size: 1.5rem;
   }
 
@@ -142,5 +153,12 @@
     padding: 8rem 1rem 1rem;
   }
 
+  .topbar__logo-mob {
+    width: 90%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 
 }

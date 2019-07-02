@@ -36,6 +36,10 @@ main {
   min-height: calc(100vh - 200px);
 }
 
+.mob_show {
+  display: none;
+}
+
 .wp-block-image img {
   height: auto;
 }
@@ -45,7 +49,6 @@ main {
 }
 
 .header__container {
-  position: relative;
   display: flex;
   width: 86%;
   margin: auto;
@@ -83,6 +86,7 @@ main {
     color: #ffffff;
     padding: .5rem;
     line-height: 1;
+    font-weight: 600;
   }
   i {
     font-size: 1rem;
@@ -90,11 +94,15 @@ main {
   }
 }
 
-.topbar__text {
+.topbar__text, .topbar__contact-address {
   font-size: .8rem;
   color: #ffffff;
   line-height: 1.2;
-  padding: 0 1rem;
+  padding: 0 .5rem;
+}
+
+.topbar__contact-address {
+  width: 12rem;
 }
 
 .btn-style-1 {
@@ -110,6 +118,10 @@ main {
     background-color: #ffffff;
     color: $main-green;
   }
+}
+
+.topbar__item .btn {
+  margin-left: 1rem;
 }
 
 .menu__wrapper {
