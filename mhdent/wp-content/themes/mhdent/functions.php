@@ -48,9 +48,9 @@ function mhdent_scripts()
 {
     wp_enqueue_style('basic-styles', get_stylesheet_uri(), array(), '1.0.0');
 
-    wp_enqueue_style('mhdent-styles', get_template_directory_uri() . '/css/styles.min.css', array(), '0.0.3');
+    wp_enqueue_style('mhdent-styles', get_template_directory_uri() . '/css/styles.min.css', array(), '0.0.4');
 
-    wp_enqueue_script('mhdent-navigation', get_template_directory_uri() . '/js/scripts.min.js', array(), '0.0.2');
+    wp_enqueue_script('mhdent-navigation', get_template_directory_uri() . '/js/scripts.min.js', array(), '0.0.3');
 
 }
 
