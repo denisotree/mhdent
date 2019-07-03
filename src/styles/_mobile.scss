@@ -85,9 +85,11 @@
 
   .head__welcome-image-mob {
     width: 100%;
+    padding: 7rem 1rem 1rem;
     img {
       width: 100%;
       height: auto;
+      border-radius: 50%;
     }
   }
 
@@ -97,7 +99,8 @@
   }
 
   .head__welcome-content {
-    width: 100%;
+    padding: 2rem 1rem;
+      width: 100%;
   }
 
   .main__slider-item-image::before {
@@ -167,10 +170,6 @@
   .main__slider-item-content {
     width: 100%;
     padding: 0 3rem;
-  }
-
-  .head__welcome-content {
-    padding: 8rem 1rem 1rem;
   }
 
   .topbar__logo-mob {

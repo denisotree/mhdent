@@ -27,7 +27,7 @@ $home_link = pll_home_url();
     </div>
     <div class="topbar__logo-mob d-md-none">
         <a href="<?= $home_link ?>">
-            <img src="<?= $template_dir; ?>/images/logo_mob.png" alt="">
+            <img src="<?= $template_dir; ?>/images/logo_mob_2.png" alt="">
         </a>
     </div>
     <div class="header__container">
