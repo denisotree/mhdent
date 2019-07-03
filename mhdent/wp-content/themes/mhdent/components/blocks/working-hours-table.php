@@ -14,6 +14,9 @@ if ($type == 'current') {
     $saturday = CFS()->get('saturday');
     $sunday = CFS()->get('sunday');
     ?>
+    <div class="working-hours__table-mob-right-arrow  d-md-none">
+        <?php pll_e('Таблица прокручивается вправо') ?> <i class="fas fa-arrow-right"></i>
+    </div>
     <div class="working-hours__table table-responsive">
         <div class="working-hours__table-title">
             <?php pll_e('Часы работы'); ?>
@@ -55,6 +58,9 @@ if ($type == 'current') {
 
     if ($doctors_query->have_posts()) {
         ?>
+        <div class="working-hours__table-mob-right-arrow  d-md-none">
+            <?php pll_e('Таблица прокручивается вправо') ?> <i class="fas fa-arrow-right"></i>
+        </div>
         <div class="working-hours__table table-responsive">
             <table class="equal-width-cols">
                 <thead>
@@ -72,7 +78,7 @@ if ($type == 'current') {
                 <?php
 
                 while ($doctors_query->have_posts()) {
-                 $doctors_query->the_post();
+                    $doctors_query->the_post();
 
                     $monday = CFS()->get('monday');
                     $tuesday = CFS()->get('tuesday');
@@ -83,26 +89,26 @@ if ($type == 'current') {
                     $sunday = CFS()->get('sunday');
 
 
-                ?>
-                <tr>
-                    <th colspan="7">
+                    ?>
+                    <tr>
+                        <th colspan="7">
                     <span class="services__table-subtitle">
                         <span class="services__table-subtitle-text">
                             <?= get_the_title(); ?>
                         </span>
                     </span>
-                    </th>
-                </tr>
-                <tr>
-                    <td><?php echo $monday != '' ? $monday : pll__('Выходной') ?></td>
-                    <td><?php echo $tuesday != '' ? $tuesday : pll__('Выходной') ?></td>
-                    <td><?php echo $wednesday != '' ? $wednesday : pll__('Выходной') ?></td>
-                    <td><?php echo $thursday != '' ? $thursday : pll__('Выходной') ?></td>
-                    <td><?php echo $friday != '' ? $friday : pll__('Выходной') ?></td>
-                    <td><?php echo $saturday != '' ? $saturday : pll__('Выходной') ?></td>
-                    <td><?php echo $sunday != '' ? $sunday : pll__('Выходной') ?></td>
-                </tr>
-                <?php  }
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><?php echo $monday != '' ? $monday : pll__('Выходной') ?></td>
+                        <td><?php echo $tuesday != '' ? $tuesday : pll__('Выходной') ?></td>
+                        <td><?php echo $wednesday != '' ? $wednesday : pll__('Выходной') ?></td>
+                        <td><?php echo $thursday != '' ? $thursday : pll__('Выходной') ?></td>
+                        <td><?php echo $friday != '' ? $friday : pll__('Выходной') ?></td>
+                        <td><?php echo $saturday != '' ? $saturday : pll__('Выходной') ?></td>
+                        <td><?php echo $sunday != '' ? $sunday : pll__('Выходной') ?></td>
+                    </tr>
+                <?php }
 
                 wp_reset_postdata();
 
