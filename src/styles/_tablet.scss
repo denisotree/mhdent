@@ -21,7 +21,7 @@
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 990px) {
   html,
   body {
     height: 100%;
@@ -96,6 +96,15 @@
 
   .topbar__contact-address {
     display: none;
+  }
+
+  .footer__centered {
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .footer__address {
+    text-align: center;
   }
 
 }

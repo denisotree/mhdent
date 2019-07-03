@@ -8,7 +8,7 @@ if ($type == 'current') {
 
     if (have_posts()) {
         ?>
-        <div class="services__price-table table-responsive">
+        <div class="services__price-table">
             <table>
                 <thead>
                 <tr>
@@ -43,8 +43,8 @@ if ($type == 'current') {
 
     ?>
 
-    <div class="services__price-table table-responsive">
-        <table class="equal-width-cols">
+    <div class="services__price-table">
+        <table>
             <thead>
             <tr>
                 <th><?php pll_e('Услуга') ?></th>

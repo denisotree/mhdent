@@ -9,12 +9,15 @@ $footer_vk = get_option('vk');
 if (pll_current_language() == 'ru') {
     $copyright = get_option('copyright_ru');
     $policy = '/politika/';
+    $contact_address = get_option('contact_address_ru');
 } elseif (pll_current_language() == 'en') {
     $copyright = get_option('copyright_en');
     $policy = '/policy/';
+    $contact_address = get_option('contact_address_en');
 } else {
     $copyright = get_option('copyright_en');
     $policy = '/policy/';
+    $contact_address = get_option('contact_address_en');
 }
 
 ?>
@@ -29,7 +32,9 @@ if (pll_current_language() == 'ru') {
                         <a class="footer__social-item" href="<?= $footer_facebook ?>"><i class="fab fa-facebook-f"></i></a>
                         <a class="footer__social-item" href="<?= $footer_vk ?>"><i class="fab fa-vk"></i></a>
                     </div>
-                    <a href="<?= $policy ?>"><?php pll_e('Политика конфиденциальности') ?></a>
+                    <div class="footer__contacts">
+                        <?= 'E-mail:&nbsp;<a href="mailto:' . $footer_email . '">' . $footer_email . '</a>'?>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -42,8 +47,13 @@ if (pll_current_language() == 'ru') {
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="footer__contacts">
-                    <?= 'E-mail:&nbsp;<a href="mailto:' . $footer_email . '">' . $footer_email . '</a>'?>
+                <div class="footer__centered">
+                    <div class="footer__address">
+                        <?= $contact_address ?>
+                    </div>
+                    <div class="footer__policy">
+                        <a href="<?= $policy ?>"><?php pll_e('Политика конфиденциальности') ?></a>
+                    </div>
                 </div>
             </div>
         </div>

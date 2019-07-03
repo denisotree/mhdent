@@ -129,6 +129,18 @@
 
 @media screen and (max-width: 450px) {
 
+  .section__container {
+    padding: 1rem;
+  }
+
+  .main-section-title-wrapper {
+    margin: 1rem 0;
+  }
+
+  .service__archive-wrapper {
+    padding: 1rem 0;
+  }
+
   .topbar__text {
     display: none;
   }
@@ -162,11 +174,47 @@
   }
 
   .topbar__logo-mob {
-    width: 90%;
+    width: 80%;
     img {
       width: 100%;
       height: auto;
     }
   }
 
+  .services__price-table {
+    padding: 1rem;
+    table {
+      tbody {
+        tr{
+          td{
+            font-size: .7rem;
+            padding: .5rem 0;
+          }
+          .services__table-subtitle {
+            left: -1rem;
+            .services__table-subtitle-text {
+              font-size: .8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .services__price-table {
+    padding: .7rem;
+    table {
+      tbody {
+        tr{
+          td{
+            font-size: .6rem;
+            padding: .5rem 0;
+          }
+        }
+      }
+    }
+  }
 }

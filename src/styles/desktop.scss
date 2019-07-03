@@ -88,7 +88,7 @@ main {
   a {
     font-size: 1rem;
     color: #ffffff;
-    padding: .5rem;
+    padding: 0 1.5rem 0 .5rem;
     line-height: 1;
     font-weight: 600;
   }
@@ -613,6 +613,21 @@ footer {
   }
 }
 
+.footer__policy {
+  a {
+    color: #ffffff;
+    font-weight: 600;
+    transition: color .3s;
+    font-size: 1rem;
+  }
+  a:hover {
+    color: $main-green;
+    i {
+      color: $main-green;
+    }
+  }
+}
+
 .footer__anagram {
   display: flex;
   justify-content: center;
@@ -632,7 +647,6 @@ footer {
 
 .footer__contacts {
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
   color: #ffffff;
@@ -644,6 +658,20 @@ footer {
   a:hover {
     color: $main-green;
   }
+}
+
+.footer__address {
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: right;
+}
+
+.footer__centered {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
 }
 
 .service__archive-wrapper {
