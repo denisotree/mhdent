@@ -686,12 +686,19 @@ footer {
 }
 
 .service__order {
+  position: relative;
   a {
     display: block;
     width: 100%;
+    transition: color .3s, background-color .3s, border .3s;
   }
   a:hover {
     border: 1px solid $main-green;
+  }
+  .fixed {
+    top: 1rem;
+    right: 1rem;
+    position: fixed;
   }
 }
 

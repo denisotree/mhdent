@@ -39,4 +39,36 @@ $(document).ready(function () {
         $('#modalBackCallForm').modal('show');
     });
 
+    function sidebarButtonStick() {
+        $(window).on('scroll', function () {
+            var scrollTop = $(window).scrollTop();
+            var sticky = $('.sidebar-fixed-top');
+            var stickyContainer = $('.service__order');
+            var stickyContainerTop = stickyContainer.offset().top;
+            var stickOffset = 15;
+            if (scrollTop > 350) {
+                var diff = scrollTop + stickOffset - stickyContainerTop;
+                sticky.css({'position': 'absolute', 'top': diff})
+            } else {
+                sticky.css({'position': 'relative', 'top': 'auto'})
+            }
+        });
+    }
+
+    var windowWidth = $(window).width();
+    if (windowWidth > 990) {
+        sidebarButtonStick();
+    }
+
+    $(window).on('resize', function () {
+        var windowWidth = $(window).width();
+        var sticky = $('.sidebar-fixed-top');
+        if (windowWidth > 990) {
+            sidebarButtonStick();
+        }
+        else {
+            sticky.css({'position': 'relative', 'top': 'auto'})
+        }
+    });
+
 });
