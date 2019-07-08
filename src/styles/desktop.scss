@@ -685,6 +685,16 @@ footer {
   }
 }
 
+.service__order {
+  a {
+    display: block;
+    width: 100%;
+  }
+  a:hover {
+    border: 1px solid $main-green;
+  }
+}
+
 .services__price-table, .working-hours__table {
   background-color: $light-blue;
   padding: 1rem 2rem;

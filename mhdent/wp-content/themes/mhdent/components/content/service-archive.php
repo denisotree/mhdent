@@ -5,17 +5,8 @@ $description = term_description();
 ?>
 <div class="service__archive-wrapper">
     <?php get_component('components/blocks/history-back.php', []); ?>
-    <div class="row">
-        <div class="col-xl-4 col-lg-3">
-            <?php
-
-            get_component('components/content/loop.php', [
-                'loop_item_type' => 'just-title'
-            ])
-
-            ?>
-        </div>
-        <div class="col-xl-8 col-lg-9">
+    <div class="row flex-lg-row flex-sm-column-reverse">
+        <div class="col-lg-9">
             <div class="service__article">
                 <?php
                 get_component('components/blocks/services-price-table.php', [
@@ -25,6 +16,11 @@ $description = term_description();
                 echo $description;
 
                 ?>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="service__order">
+                <a href="#modalConsultForm" data-page="<?= $title ?>" class="btn btn-style-1 consultButton"><?php pll_e('Получить консультацию') ?></a>
             </div>
         </div>
     </div>

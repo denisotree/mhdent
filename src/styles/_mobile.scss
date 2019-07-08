@@ -138,6 +138,10 @@
     }
   }
 
+  .flex-sm-column-reverse {
+    flex-direction: column-reverse;
+  }
+
 }
 
 @media screen and (max-width: 450px) {
