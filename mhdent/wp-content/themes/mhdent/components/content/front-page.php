@@ -13,7 +13,7 @@ get_component('components/blocks/page-slider.php', []);
             $news_link = pll_current_language() == 'ru' ? '/novosti/' : '/en/novosti/';
 
             get_component('components/blocks/centered-section-title.php', [
-                'title_text' => 'Новости',
+                'title_text' => pll__('Новости'),
                 'title_link' => $news_link
             ]) ?>
             <?php get_component('components/content/loop.php', [
@@ -29,7 +29,7 @@ get_component('components/blocks/page-slider.php', []);
 </div>
 <div class="section__container">
     <?php get_component('components/blocks/centered-section-title.php', [
-        'title_text' => 'Услуги',
+        'title_text' => pll__('Услуги'),
         'title_link' => '/uslugi/'
     ]);
 
