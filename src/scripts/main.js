@@ -40,19 +40,22 @@ $(document).ready(function () {
     });
 
     function sidebarButtonStick() {
-        $(window).on('scroll', function () {
-            var scrollTop = $(window).scrollTop();
-            var sticky = $('.sidebar-fixed-top');
-            var stickyContainer = $('.service__order');
-            var stickyContainerTop = stickyContainer.offset().top;
-            var stickOffset = 15;
-            if (scrollTop > 350) {
-                var diff = scrollTop + stickOffset - stickyContainerTop;
-                sticky.css({'position': 'absolute', 'top': diff})
-            } else {
-                sticky.css({'position': 'relative', 'top': 'auto'})
-            }
-        });
+    
+        if ($('.service__order').length != 0) {
+            $(window).on('scroll', function () {
+                var scrollTop = $(window).scrollTop();
+                var sticky = $('.sidebar-fixed-top');
+                var stickyContainer = $('.service__order');
+                var stickyContainerTop = stickyContainer.offset().top;
+                var stickOffset = 15;
+                if (scrollTop > 350) {
+                    var diff = scrollTop + stickOffset - stickyContainerTop;
+                    sticky.css({'position': 'absolute', 'top': diff})
+                } else {
+                    sticky.css({'position': 'relative', 'top': 'auto'})
+                }
+            });
+        }
     }
 
     var windowWidth = $(window).width();

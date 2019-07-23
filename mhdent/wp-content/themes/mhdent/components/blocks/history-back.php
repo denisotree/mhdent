@@ -5,10 +5,8 @@ if (is_singular('services')) {
         'fields' => 'ids'
     ]);
     $back_link = get_term_link($current_service_type[0], 'service');
-} elseif (is_singular(['vrachi', 'novosti'])) {
+} elseif (is_single()) {
     $back_link = '/' . get_post_type() . '/';
-} elseif (is_tax()) {
-    $back_link = '/uslugi/';
 } else {
     $back_link = 'javascript:history.go(-1)';
 }

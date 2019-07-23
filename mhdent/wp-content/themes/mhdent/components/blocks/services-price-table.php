@@ -6,27 +6,28 @@
 
 if ($type == 'current') {
 
-    if (have_posts()) {
+    $services = CFS() -> get('service_positions');
+
+    if (!is_null($services)) {
         ?>
         <div class="services__price-table">
             <table>
                 <thead>
-                <tr>
-                    <th><?php pll_e('Услуга') ?></th>
-                    <th><?php pll_e('Цена') ?></th>
-                </tr>
+                    <tr>
+                        <th><?php pll_e('Услуга') ?></th>
+                        <th><?php pll_e('Цена') ?></th>
+                    </tr>
                 </thead>
                 <tbody>
-                <?php while (have_posts()) {
-                    the_post();
-                    $title = get_the_title();
-                    $price = CFS()->get('service_price');
-                    ?>
-                    <tr>
-                        <td><?= $title ?></td>
-                        <td><?= $price ?></td>
-                    </tr>
-                <?php } ?>
+                    <?php foreach ($services as $service) {
+                        $title = $service['position_title'];
+                        $price = $service['position_price'];
+                        ?>
+                        <tr>
+                            <td><?= $title ?></td>
+                            <td><?= $price ?></td>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
@@ -36,68 +37,58 @@ if ($type == 'current') {
     }
 } else {
 
-    $services_types = get_terms([
-        'taxonomy' => 'service',
-        'hide_empty' => true
-    ]);
+    $services_types = new WP_Query([ 'post_type' => 'uslugi' ]);
+    if ($services_types -> have_posts()) {
+        ?>
 
-    ?>
+        <div class="services__price-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th><?php pll_e('Услуга') ?></th>
+                        <th><?php pll_e('Цена') ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    while ($services_types -> have_posts()) {
+                        $services_types -> the_post();
+                        $services_type_name = get_the_title();
+                        $services = CFS() -> get('service_positions');
+                        if (!is_null($services)) {
+                            ?>
+                            <tr>
+                                <th>
+                                    <span class="services__table-subtitle">
+                                        <span class="services__table-subtitle-text">
+                                            <?= $services_type_name ?>
+                                        </span>
+                                    </span>
+                                </th>
+                            </tr>
 
-    <div class="services__price-table">
-        <table>
-            <thead>
-            <tr>
-                <th><?php pll_e('Услуга') ?></th>
-                <th><?php pll_e('Цена') ?></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
+                            <?php
+                            foreach ($services as $service) {
+                               $title = $service['position_title'];
+                               $price = $service['position_price'];
+                               ?>
 
-            foreach ($services_types as $type) {
-                $services_group_query = new WP_Query([
-                    'post_type' => 'uslugi',
-                    'service' => $type->slug
-                ]);
-                if ($services_group_query->have_posts()) {
-                ?>
+                               <tr>
+                                <td><?= $title ?></td>
+                                <td><?= $price ?></td>
+                            </tr>
 
-                <tr>
-                    <th>
-                        <span class="services__table-subtitle">
-                            <span class="services__table-subtitle-text">
-                                <?= $type->name ?>
-                            </span>
-                        </span>
-                    </th>
-                </tr>
-
-                <?php
-                    while ($services_group_query->have_posts()) {
-                        $services_group_query->the_post();
-                        $title = get_the_title();
-                        $price = CFS()->get('service_price');
-                        ?>
-
-                        <tr>
-                            <td><?= $title ?></td>
-                            <td><?= $price ?></td>
-                        </tr>
-
-                        <?php
+                            <?php
+                        }
                     }
-
-                    wp_reset_postdata();
-
                 }
+                wp_reset_postdata();
 
-            }
-
-           ?>
+                ?>
             </tbody>
         </table>
     </div>
 
     <?php
-
+}
 }

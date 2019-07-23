@@ -6,8 +6,6 @@ get_component('components/blocks/main-section-title.php', [
 
 ?>
 
-<script src="https://vk.com/js/api/openapi.js?161" type="text/javascript"></script>
-
 <div class="service__archive-wrapper">
     <?php get_component('components/blocks/history-back.php', []); ?>
     <div class="row">
