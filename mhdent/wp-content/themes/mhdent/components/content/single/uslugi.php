@@ -4,7 +4,12 @@ $title = get_the_title();
 
 $description = get_the_content();
 
+get_component('components/blocks/main-section-title.php', [
+    'title_text' => $title
+]);
+
 ?>
+
 <div class="service__archive-wrapper">
     <?php get_component('components/blocks/history-back.php', []); ?>
     <div class="row flex-lg-row flex-sm-column-reverse">
