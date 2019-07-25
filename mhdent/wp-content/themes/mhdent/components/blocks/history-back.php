@@ -15,5 +15,5 @@ if (is_singular('services')) {
 
 <div class="history-back__block">
     <i class="fas fa-arrow-left"></i>
-    <a href="<?= $back_link ?>">Назад</a>
+    <a href="<?= $back_link ?>"><?php pll_e('Назад') ?></a>
 </div>
