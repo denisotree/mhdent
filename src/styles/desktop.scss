@@ -739,6 +739,11 @@ footer {
           border-bottom: 1px solid $light-grey;
           color: $text-grey;
         }
+        th {
+          position: relative;
+          padding: 2rem 0;
+          text-align: left;
+        }
         th.doctor-title {
           position: relative;
           padding: 2rem 0;
@@ -779,6 +784,7 @@ footer {
 }
 
 .working-hours__table {
+  padding: 1rem;
   table {
     thead {
       tr {
@@ -802,6 +808,9 @@ footer {
           font-size: .8rem;
           font-family: PT Serif, serif;
           color: $main-dark;
+        }
+        .services__table-subtitle {
+          left: -1rem;
         }
       }
     }
