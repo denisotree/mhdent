@@ -12,12 +12,14 @@
         if ($post_slug == 'vrachi') {
             $block_type = 'team-card';
             $blocks_per_line = 4;
+            $archive_title = pll__('Врачи');
         } elseif ($post_slug == 'novosti') {
             $block_type = 'row';
+            $archive_title = pll__('Новости');
         }
 
         get_component('components/blocks/main-section-title.php', [
-            'title_text' => get_the_archive_title()
+            'title_text' => $archive_title
         ]);
         ?>
         <div class="archive-wrapper">

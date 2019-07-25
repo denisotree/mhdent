@@ -74,7 +74,7 @@ if ($type == 'current') {
              <?php 
              if ($type) { ?>
                 <tr>
-                    <th>Четные дни</th>
+                    <th><?php pll_e('Четные дни') ?></th>
                     <?= $monday_even != '' ? "<td>" . $monday_even . "</td>" : "<td rowspan=2>" . $monday_common . "</td>" ?>
                     <?= $tuesday_even != '' ? "<td>" . $tuesday_even . "</td>" : "<td rowspan=2>" . $tuesday_common . "</td>" ?>
                     <?= $wednesday_even != '' ? "<td>" . $wednesday_even . "</td>" : "<td rowspan=2>" . $wednesday_common . "</td>" ?>
@@ -84,7 +84,7 @@ if ($type == 'current') {
                     <?= $sunday_even != '' ? "<td>" . $sunday_even . "</td>" : "<td rowspan=2>" . $sunday_common . "</td>" ?>
                 </tr>
                 <tr>
-                    <th>Нечетные дни</th>
+                    <th><?php pll_e('Нечетные дни') ?></th>
                     <?= $monday_odd != '' ? "<td>" . $monday_odd . "</td>" : "" ?>
                     <?= $tuesday_odd != '' ? "<td>" . $tuesday_odd . "</td>" : "" ?>
                     <?= $wednesday_odd != '' ? "<td>" . $wednesday_odd . "</td>" : "" ?>
@@ -201,7 +201,7 @@ if ($type == 'current') {
                         <?php 
                         if ($type) { ?>
                             <tr>
-                                <th>Четные дни</th>
+                                <th><?php pll_e('Четные дни') ?></th>
                                 <?= $monday_even != '' ? "<td>" . $monday_even . "</td>" : "<td rowspan=2>" . $monday_common . "</td>" ?>
                                 <?= $tuesday_even != '' ? "<td>" . $tuesday_even . "</td>" : "<td rowspan=2>" . $tuesday_common . "</td>" ?>
                                 <?= $wednesday_even != '' ? "<td>" . $wednesday_even . "</td>" : "<td rowspan=2>" . $wednesday_common . "</td>" ?>
@@ -211,7 +211,7 @@ if ($type == 'current') {
                                 <?= $sunday_even != '' ? "<td>" . $sunday_even . "</td>" : "<td rowspan=2>" . $sunday_common . "</td>" ?>
                             </tr>
                             <tr>
-                                <th>Нечетные дни</th>
+                                <th><?php pll_e('Нечетные дни') ?></th>
                                 <?= $monday_odd != '' ? "<td>" . $monday_odd . "</td>" : "" ?>
                                 <?= $tuesday_odd != '' ? "<td>" . $tuesday_odd . "</td>" : "" ?>
                                 <?= $wednesday_odd != '' ? "<td>" . $wednesday_odd . "</td>" : "" ?>
