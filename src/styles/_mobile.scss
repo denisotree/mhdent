@@ -142,6 +142,10 @@
     flex-direction: column-reverse;
   }
 
+.equal-width-cols {
+  min-width: 900px;
+}
+
 }
 
 @media screen and (max-width: 450px) {
