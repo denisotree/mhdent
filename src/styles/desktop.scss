@@ -739,7 +739,7 @@ footer {
           border-bottom: 1px solid $light-grey;
           color: $text-grey;
         }
-        th {
+        th.doctor-title {
           position: relative;
           padding: 2rem 0;
           text-align: left;
@@ -789,8 +789,19 @@ footer {
     }
     tbody {
       tr {
+        td {
+          border-bottom: 0;
+          font-size: .8rem;
+          padding: .5rem
+        }
         td:last-child {
           text-align: left;
+        }
+        th {
+          padding: .5rem;
+          font-size: .8rem;
+          font-family: PT Serif, serif;
+          color: $main-dark;
         }
       }
     }
