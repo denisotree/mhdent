@@ -788,6 +788,9 @@ footer {
   table {
     thead {
       tr {
+        th {
+          padding: .5rem;
+        }
         th:last-child {
           text-align: left;
         }
