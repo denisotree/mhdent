@@ -403,6 +403,11 @@ main {
   padding: 1rem;
 }
 
+.card__date {
+  font-size: .8rem;
+  color: $text-grey;
+}
+
 .card__title, .card__row-title {
   font-family: PT Serif, serif;
   font-size: 1.2rem;
@@ -564,6 +569,15 @@ main {
   text-align: center;
   color: $main-dark;
   transition: all .3s;
+}
+
+.news__preview-image {
+  width: 100%;
+  max-height: 1rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 footer {
@@ -906,10 +920,10 @@ footer {
 
 .contacts__info-content {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
-  align-items: center;
+  align-items: flex-start;
   font-size: 1rem;
   color: $main-dark;
   font-family: PT Serif, serif;
@@ -933,6 +947,10 @@ footer {
 
 .contacts__info-phone {
   margin-bottom: 2rem;
+}
+
+.contacts__article {
+  padding: 2rem 0;
 }
 
 .map-wrapper {

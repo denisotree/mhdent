@@ -77,6 +77,16 @@ function additional_settings()
     register_setting('general', 'vk');
 
     add_settings_field(
+        'instagram',
+        'Адрес в Instagram',
+        'instagram_field',
+        'general',
+        'over_options'
+    );
+
+    register_setting('general', 'vk');
+
+    add_settings_field(
         'contact_address_ru',
         'Адрес клиники по русски',
         'contact_address_ru_field',
@@ -189,6 +199,16 @@ function vk_field()
 		value="' . get_option('vk') . '" 
 		class="code2"
 	 />';
+}
+
+function instagram_field()
+{
+    echo '<input 
+        name="instagram"  
+        type="text" 
+        value="' . get_option('instagram') . '" 
+        class="code2"
+     />';
 }
 
 function contact_address_ru_field()

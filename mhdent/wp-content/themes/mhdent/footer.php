@@ -5,6 +5,7 @@
 $footer_email = get_option('contact_email');
 $footer_facebook = get_option('facebook');
 $footer_vk = get_option('vk');
+$footer_instagram = get_option('instagram');
 
 if (pll_current_language() == 'ru') {
     $copyright = get_option('copyright_ru');
@@ -31,6 +32,7 @@ if (pll_current_language() == 'ru') {
                         <?php pll_e('Мы в социальных сетях: '); ?>
                         <a class="footer__social-item" href="<?= $footer_facebook ?>"><i class="fab fa-facebook-f"></i></a>
                         <a class="footer__social-item" href="<?= $footer_vk ?>"><i class="fab fa-vk"></i></a>
+                        <a class="footer__social-item" href="<?= $footer_instagram ?>"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="footer__contacts">
                         <?= 'E-mail:&nbsp;<a href="mailto:' . $footer_email . '">' . $footer_email . '</a>'?>

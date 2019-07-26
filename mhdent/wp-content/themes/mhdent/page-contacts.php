@@ -10,23 +10,21 @@ get_component('components/blocks/main-section-title.php', [
     'title_text' => get_the_title()
 ]);
 
-$phone = get_option('contact_phone');
-$phone_link = preg_replace('~[^0-9+]+~', '', $phone);
+function get_pure_link($raw_text) {
+    return preg_replace('~[^0-9+]+~', '', $raw_text);
+}
+
+$phone_1 = CFS() -> get('contacts_phone_1');
+$phone_link_1 = get_pure_link($phone_1);
+
+$phone_2 = CFS() -> get('contacts_phone_2');
+$phone_link_2 = get_pure_link($phone_2);
 
 $current_path = get_template_directory_uri();
 
-if (pll_current_language() == 'ru') {
-    $open_hours = get_option('opening_hours_ru');
-    $contact_address = get_option('contact_address_ru');
-} elseif (pll_current_language() == 'en') {
-    $open_hours = get_option('opening_hours_en');
-    $contact_address = get_option('contact_address_en');
-} else {
-    $open_hours = get_option('opening_hours_en');
-    $contact_address = get_option('contact_address_en');
-}
+$contact_address = CFS() -> get('contacts_address');
 
-$email = get_option('contact_email');
+$email = CFS() -> get('contacts_email');
 $api_key = get_option('api_key')
 
 ?>
@@ -59,7 +57,8 @@ $api_key = get_option('api_key')
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="contacts__info-content">
-                                        <a href="tel:<?= $phone_link ?>"><?= $phone ?></a>
+                                        <a href="tel:<?= $phone_link_1 ?>"><?= $phone_1 ?></a>
+                                        <a href="tel:<?= $phone_link_2 ?>"><?= $phone_2 ?></a>
                                     </div>
                                 </div>
                             </div>
@@ -102,6 +101,14 @@ $api_key = get_option('api_key')
                             <script src="https://maps.googleapis.com/maps/api/js?key=<?= $api_key ?>&callback=initMap"
                                     async defer></script>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-8">
+                    <div class="contacts__article">
+                        <?= get_the_content(); ?>
                     </div>
                 </div>
             </div>
