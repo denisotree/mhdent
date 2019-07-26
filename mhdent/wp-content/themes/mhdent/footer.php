@@ -30,9 +30,9 @@ if (pll_current_language() == 'ru') {
                 <div class="footer__social">
                     <div class="footer__social-links">
                         <?php pll_e('Мы в социальных сетях: '); ?>
-                        <a class="footer__social-item" href="<?= $footer_facebook ?>"><i class="fab fa-facebook-f"></i></a>
-                        <a class="footer__social-item" href="<?= $footer_vk ?>"><i class="fab fa-vk"></i></a>
-                        <a class="footer__social-item" href="<?= $footer_instagram ?>"><i class="fab fa-instagram"></i></a>
+                        <a class="footer__social-item" target="_blank" rel="noreferrer noopener" href="<?= $footer_facebook ?>"><i class="fab fa-facebook-f"></i></a>
+                        <a class="footer__social-item" target="_blank" rel="noreferrer noopener" href="<?= $footer_vk ?>"><i class="fab fa-vk"></i></a>
+                        <a class="footer__social-item" target="_blank" rel="noreferrer noopener" href="<?= $footer_instagram ?>"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="footer__contacts">
                         <?= 'E-mail:&nbsp;<a href="mailto:' . $footer_email . '">' . $footer_email . '</a>'?>
