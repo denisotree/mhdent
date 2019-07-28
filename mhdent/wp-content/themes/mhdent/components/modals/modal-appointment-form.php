@@ -1,20 +1,20 @@
 <?php
 
 /**
- * Вспывающая форма "Получить консультацию"
+ * Вспывающая форма "Записаться на прием"
  */
 
 $frontpage_id = get_option('page_on_front');
 
-$consultForm = CFS()->get('consult_form', $frontpage_id);
+$appointmentForm = CFS()->get('appointment_form', $frontpage_id);
 
 ?>
 
-<div class="modal fade" id="modalConsultForm" tabindex="-1" role="dialog" aria-labelledby="modalConsultFormTitle" aria-hidden="true">
+<div class="modal fade" id="modalAppointmentForm" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentFormTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalConsultFormTitle"><?php pll_e('Получить консультацию') ?></h5>
+                <h5 class="modal-title" id="modalAppointmentFormTitle"><?php pll_e('Записаться на прием') ?></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -22,7 +22,7 @@ $consultForm = CFS()->get('consult_form', $frontpage_id);
             <div class="modal-body">
                 <?php
 
-                echo do_shortcode($consultForm);
+                echo do_shortcode($appointmentForm);
 
                 ?>
             </div>

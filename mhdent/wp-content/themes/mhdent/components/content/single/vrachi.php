@@ -22,7 +22,7 @@ $doctor_description = get_the_content();
                     <?= $doctor_spec ?>
                 </div>
                 <div class="doctor__appointment">
-                    <a href="#" class="btn btn-style-1"><?php pll_e('Записаться на прием')?></a>
+                    <a href="#modalAppointmentForm" data-page="<?= $doctor_name ?>" class="btn btn-style-1 appointmentButton"><?php pll_e('Записаться на прием')?></a>
                 </div>
                 <div class="doctor__description">
                     <?= $doctor_description ?>

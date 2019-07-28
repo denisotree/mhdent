@@ -33,6 +33,14 @@ $(document).ready(function () {
         $(formID).modal('show');
         $('#form_subject').val(currentPage);
     });
+ 
+    $('.appointmentButton').on('click', function (e) {
+        e.preventDefault();
+        var formID = $(this).attr('href');
+        var currentPage = $(this).data('page');
+        $(formID).modal('show');
+        $('#form_doctor').val(currentPage);
+    });
 
     $('#backCallButton').on('click', function (e) {
         e.preventDefault();
